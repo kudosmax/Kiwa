@@ -47,6 +47,15 @@ Download the latest version from the [releases](https://github.com/kudosmax/Kiwa
 brew install --cask kiwa # coming soon
 ```
 
+> [!WARNING]
+> Since Kiwa is not notarized with Apple, macOS may block it on first launch. To allow it:
+>
+> 1. Open **System Settings > Privacy & Security**.
+> 2. Scroll down to find the message: *"Mac을 보호하기 위해 'Kiwa'을(를) 차단했습니다."*
+> 3. Click **"그래도 열기" (Open Anyway)**.
+>
+> <img width="600px" src="Resources/Screenshots/gatekeeper.png" alt="Gatekeeper warning" />
+
 ## Usage
 
 1. <kbd>COMMAND (⌘)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd> to open the Kiwa panel, or click on its icon in the menu bar.
