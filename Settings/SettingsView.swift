@@ -1,5 +1,6 @@
 import SwiftUI
 import Defaults
+import ServiceManagement
 
 struct SettingsView: View {
     @Default(.launchAtLogin) var launchAtLogin
@@ -24,8 +25,17 @@ struct SettingsView: View {
                 VStack(alignment: .leading, spacing: 12) {
                     Toggle(String(localized: "settings.launch.at.login"), isOn: $launchAtLogin)
                         .onChange(of: launchAtLogin) { _, newValue in
-                            // TODO: Implement actual login item registration
-                            print("Launch at login: \(newValue)")
+                            do {
+                                if newValue {
+                                    try SMAppService.mainApp.register()
+                                } else {
+                                    try SMAppService.mainApp.unregister()
+                                }
+                            } catch {
+                                print("Failed to \(newValue ? "register" : "unregister") login item: \(error)")
+                                // Revert toggle on failure
+                                launchAtLogin = !newValue
+                            }
                         }
 
                     HStack {
