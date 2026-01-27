@@ -73,8 +73,8 @@ brew install --cask kiwa # coming soon
 | 2 | 『』 | Book title |
 | 3 | 〈〉 | Work / Poem title |
 | 4 | 《》 | Film / Album title |
-| 5 | \u{201C}\u{201D} | Quotation |
-| 6 | \u{2018}\u{2019} | Emphasis |
+| 5 | “” | Quotation |
+| 6 | ‘’ | Emphasis |
 | 7 | — | Em Dash |
 | 8 | · | Middle Dot |
 | 9 | …… | Ellipsis |
