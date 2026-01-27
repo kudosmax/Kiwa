@@ -99,7 +99,7 @@ final class AppState {
         let githubLink = NSMutableAttributedString(
             string: "GitHub",
             attributes: [
-                .link: "https://github.com/example/kiwa",
+                .link: "https://github.com/kudosmax/Kiwa",
                 .font: NSFont.systemFont(ofSize: 11)
             ]
         )
