@@ -140,38 +140,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func showAbout() {
-        NSApp.activate(ignoringOtherApps: true)
-
-        let credits = NSMutableAttributedString()
-
-        // App description
-        let description = NSAttributedString(
-            string: String(localized: "about.description") + "\n\n",
-            attributes: [
-                .foregroundColor: NSColor.labelColor,
-                .font: NSFont.systemFont(ofSize: 11)
-            ]
-        )
-        credits.append(description)
-
-        // GitHub link
-        let githubLink = NSMutableAttributedString(
-            string: "GitHub",
-            attributes: [
-                .link: "https://github.com/kudosmax/Kiwa",
-                .font: NSFont.systemFont(ofSize: 11)
-            ]
-        )
-        credits.append(githubLink)
-
-        credits.setAlignment(.center, range: NSRange(location: 0, length: credits.length))
-
-        NSApp.orderFrontStandardAboutPanel(options: [
-            .applicationName: "Kiwa",
-            .applicationVersion: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0",
-            .version: Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "1",
-            .credits: credits
-        ])
+        AppState.shared.openAbout()
     }
 
     @objc private func quitApp() {
