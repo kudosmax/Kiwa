@@ -61,7 +61,7 @@ brew install --cask kiwa # coming soon
 ## Usage
 
 1. <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd> to open the Kiwa panel, or click on its icon in the menu bar.
-2. Press <kbd>1</kbd>–<kbd>9</kbd> to select a symbol.
+2. Press <kbd>⌘1</kbd>–<kbd>⌘9</kbd> to select a symbol.
 3. The symbol is copied to your clipboard and the panel closes automatically.
 4. Paste with <kbd>⌘V</kbd> wherever you need it.
 5. To dismiss the panel, press <kbd>ESC</kbd> or click outside of it.

@@ -61,7 +61,7 @@ brew install --cask kiwa # 준비 중
 ## 사용법
 
 1. <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd>를 눌러 Kiwa 패널을 열거나, 메뉴바 아이콘을 클릭합니다.
-2. <kbd>1</kbd>~<kbd>9</kbd> 키로 기호를 선택합니다.
+2. <kbd>⌘1</kbd>~<kbd>⌘9</kbd> 키로 기호를 선택합니다.
 3. 기호가 클립보드에 복사되고 패널이 자동으로 닫힙니다.
 4. <kbd>⌘V</kbd>로 원하는 곳에 붙여넣습니다.
 5. 패널을 닫으려면 <kbd>ESC</kbd>를 누르거나 패널 바깥을 클릭합니다.
