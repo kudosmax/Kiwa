@@ -1,0 +1,78 @@
+/* Menu */
+"menu.about" = "About Kiwa";
+"menu.settings" = "Settings...";
+"menu.quit" = "Quit";
+"menu.quit.app" = "Quit Kiwa";
+
+/* Panel Footer */
+"footer.settings" = "Settings...";
+"footer.about" = "About";
+"footer.quit" = "Quit";
+
+/* Settings */
+"settings.title" = "Kiwa Settings";
+"settings.hotkey" = "Hotkey";
+"settings.symbols" = "Symbol Settings";
+"settings.launch.at.login" = "Launch at Login";
+"settings.language" = "Language";
+"hotkey.change" = "Change";
+"hotkey.cancel" = "Cancel";
+"settings.language.system" = "System Default";
+"settings.language.restart.title" = "Restart Required";
+"settings.language.restart.message" = "The app needs to restart to apply the language change.";
+"settings.language.restart.now" = "Restart Now";
+"settings.language.restart.later" = "Later";
+
+/* Symbol Settings */
+"symbols.header.slot" = "#";
+"symbols.header.opening" = "Open";
+"symbols.header.closing" = "Close";
+"symbols.header.label" = "Label";
+"symbols.closing.none" = "(none)";
+"symbols.add" = "Add Symbol";
+"symbols.reset" = "Reset to Defaults";
+"symbols.reset.title" = "Reset to Defaults";
+"symbols.reset.message" = "All symbols will be restored to default settings.";
+"symbols.reset.confirm" = "Reset";
+"symbols.reset.cancel" = "Cancel";
+
+/* Symbol Edit Sheet */
+"edit.add.title" = "Add Symbol";
+"edit.edit.title" = "Edit Symbol";
+"edit.slot" = "Slot:";
+"edit.preset" = "Choose from Presets";
+"edit.opening" = "Opening:";
+"edit.opening.placeholder" = "Paste or choose preset";
+"edit.closing" = "Closing:";
+"edit.closing.placeholder" = "Optional (for paired symbols)";
+"edit.label" = "Label:";
+"edit.label.placeholder" = "Label name";
+"edit.cancel" = "Cancel";
+"edit.save" = "Save";
+
+/* Accessibility */
+"accessibility.title" = "Accessibility Permission Required";
+"accessibility.message" = "Kiwa needs accessibility permission to insert text into other apps. Please grant permission in System Settings.";
+"accessibility.open.settings" = "Open Settings";
+"accessibility.later" = "Later";
+
+/* About */
+"about.description" = "Typographic symbol input tool\nfor Korean academic writing";
+
+/* Preset Labels */
+"preset.paper" = "Paper";
+"preset.book" = "Book";
+"preset.work" = "Work/Poem";
+"preset.film" = "Film/Album";
+"preset.quote" = "Quotation";
+"preset.emphasis" = "Emphasis";
+"preset.emdash" = "Em Dash";
+"preset.middledot" = "Middle Dot";
+"preset.ellipsis" = "Ellipsis";
+"preset.paren" = "Parentheses";
+"preset.bracket" = "Brackets";
+"preset.brace" = "Braces";
+"preset.heavy.bracket" = "Heavy Brackets";
+"preset.tortoise" = "Tortoise Brackets";
+"preset.horizontal.bar" = "Horizontal Bar";
+"preset.tilde" = "Tilde";
