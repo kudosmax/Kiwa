@@ -6,7 +6,7 @@
 
 **English** | [한국어](./README.ko.md)
 
-Kiwa is a lightweight typographic symbol input tool for macOS. It lets you quickly insert academic quotation marks and special characters into any app with a single hotkey.
+Kiwa is a symbol input tool for knowledge workers. Quickly insert academic quotation marks and special characters into any app with a single hotkey.
 
 Kiwa works on macOS Sonoma 14 or later.
 
