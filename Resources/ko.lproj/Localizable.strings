@@ -1,0 +1,78 @@
+/* Menu */
+"menu.about" = "Kiwa에 관하여";
+"menu.settings" = "설정...";
+"menu.quit" = "종료";
+"menu.quit.app" = "Kiwa 종료";
+
+/* Panel Footer */
+"footer.settings" = "설정...";
+"footer.about" = "관하여";
+"footer.quit" = "종료";
+
+/* Settings */
+"settings.title" = "Kiwa 설정";
+"settings.hotkey" = "단축키";
+"settings.symbols" = "부호 설정";
+"settings.launch.at.login" = "로그인 시 자동 실행";
+"settings.language" = "언어";
+"hotkey.change" = "변경";
+"hotkey.cancel" = "취소";
+"settings.language.system" = "시스템 설정";
+"settings.language.restart.title" = "앱 재시작 필요";
+"settings.language.restart.message" = "언어 변경을 적용하려면 앱을 재시작해야 합니다.";
+"settings.language.restart.now" = "지금 재시작";
+"settings.language.restart.later" = "나중에";
+
+/* Symbol Settings */
+"symbols.header.slot" = "#";
+"symbols.header.opening" = "여는 부호";
+"symbols.header.closing" = "닫는 부호";
+"symbols.header.label" = "라벨";
+"symbols.closing.none" = "(없음)";
+"symbols.add" = "부호 추가";
+"symbols.reset" = "기본값으로 초기화";
+"symbols.reset.title" = "기본값으로 초기화";
+"symbols.reset.message" = "모든 부호가 기본 설정으로 복원됩니다.";
+"symbols.reset.confirm" = "초기화";
+"symbols.reset.cancel" = "취소";
+
+/* Symbol Edit Sheet */
+"edit.add.title" = "부호 추가";
+"edit.edit.title" = "부호 편집";
+"edit.slot" = "슬롯 번호:";
+"edit.preset" = "프리셋에서 선택";
+"edit.opening" = "여는 부호:";
+"edit.opening.placeholder" = "붙여넣기 또는 프리셋 선택";
+"edit.closing" = "닫는 부호:";
+"edit.closing.placeholder" = "선택 (쌍 부호용)";
+"edit.label" = "라벨:";
+"edit.label.placeholder" = "라벨 이름";
+"edit.cancel" = "취소";
+"edit.save" = "저장";
+
+/* Accessibility */
+"accessibility.title" = "접근성 권한이 필요합니다";
+"accessibility.message" = "Kiwa가 다른 앱에 텍스트를 삽입하려면 접근성 권한이 필요합니다. 시스템 설정에서 권한을 허용해주세요.";
+"accessibility.open.settings" = "설정 열기";
+"accessibility.later" = "나중에";
+
+/* About */
+"about.description" = "한국어 학술 글쓰기를 위한\n타이포그래픽 부호 입력 도구";
+
+/* Preset Labels */
+"preset.paper" = "논문";
+"preset.book" = "단행본";
+"preset.work" = "작품/시";
+"preset.film" = "영화/앨범";
+"preset.quote" = "인용";
+"preset.emphasis" = "강조";
+"preset.emdash" = "Em Dash";
+"preset.middledot" = "가운뎃점";
+"preset.ellipsis" = "말줄임";
+"preset.paren" = "소괄호";
+"preset.bracket" = "대괄호";
+"preset.brace" = "중괄호";
+"preset.heavy.bracket" = "굵은 대괄호";
+"preset.tortoise" = "겹낫표";
+"preset.horizontal.bar" = "Horizontal Bar";
+"preset.tilde" = "물결표";
