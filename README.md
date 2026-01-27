@@ -36,7 +36,7 @@ Kiwa works on macOS Sonoma 14 or later.
 
 * Lightweight and fast
 * Keyboard-first
-* Smart cursor placement for paired symbols
+* Copies selected symbol to clipboard instantly
 * Fully customizable (up to 9 symbol slots)
 * Native macOS UI
 * Supports Korean and English
@@ -60,10 +60,10 @@ brew install --cask kiwa # coming soon
 
 ## Usage
 
-1. <kbd>COMMAND (⌘)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd> to open the Kiwa panel, or click on its icon in the menu bar.
-2. Press <kbd>1</kbd>–<kbd>9</kbd> to select and insert a symbol.
-3. The symbol is inserted and the panel closes automatically.
-4. For paired symbols (e.g. 「」), the cursor is placed between the opening and closing characters.
+1. <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd> to open the Kiwa panel, or click on its icon in the menu bar.
+2. Press <kbd>1</kbd>–<kbd>9</kbd> to select a symbol.
+3. The symbol is copied to your clipboard and the panel closes automatically.
+4. Paste with <kbd>⌘V</kbd> wherever you need it.
 5. To dismiss the panel, press <kbd>ESC</kbd> or click outside of it.
 6. To customize the behavior, open "Settings" with <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd>.
 
@@ -94,7 +94,7 @@ You can change the symbol for each slot in the settings:
 
 ### Change Global Hotkey
 
-To change the default hotkey <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>D</kbd>:
+To change the default hotkey <kbd>⇧</kbd> + <kbd>⌥</kbd> + <kbd>D</kbd>:
 
 1. Open settings.
 2. Click the "Change" button in the "Hotkey" section.
@@ -133,7 +133,7 @@ Kiwa is a menu bar app. It runs in the background and only appears in the menu b
 
 Korean academic writing uses a variety of typographic quotation marks such as 『』, 「」, and 《》. However, these symbols are not available on the standard macOS keyboard. Opening the special character viewer or copy-pasting every time is tedious and breaks the writing flow.
 
-Kiwa was built to solve this problem. With a single hotkey, you can quickly insert frequently used quotation marks, and for paired symbols, the cursor is automatically placed between them so you can start typing right away.
+Kiwa was built to solve this problem. With a single hotkey, you can quickly copy frequently used quotation marks to your clipboard and paste them wherever you need.
 
 ## License
 
