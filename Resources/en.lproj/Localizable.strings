@@ -27,7 +27,8 @@
 "symbols.header.slot" = "#";
 "symbols.header.opening" = "Open";
 "symbols.header.closing" = "Close";
-"symbols.header.label" = "Label";
+"symbols.header.label" = "Name";
+"symbols.header.usage" = "Usage";
 "symbols.closing.none" = "(none)";
 "symbols.add" = "Add Symbol";
 "symbols.reset" = "Reset to Defaults";
@@ -45,8 +46,10 @@
 "edit.opening.placeholder" = "Paste or choose preset";
 "edit.closing" = "Closing:";
 "edit.closing.placeholder" = "Optional (for paired symbols)";
-"edit.label" = "Label:";
-"edit.label.placeholder" = "Label name";
+"edit.label" = "Name:";
+"edit.label.placeholder" = "Symbol name";
+"edit.usage" = "Usage:";
+"edit.usage.placeholder" = "Usage description";
 "edit.cancel" = "Cancel";
 "edit.save" = "Save";
 
@@ -60,12 +63,12 @@
 "about.description" = "Typographic symbol input tool\nfor Korean academic writing";
 
 /* Preset Labels */
-"preset.paper" = "Paper";
-"preset.book" = "Book";
-"preset.work" = "Work/Poem";
-"preset.film" = "Film/Album";
-"preset.quote" = "Quotation";
-"preset.emphasis" = "Emphasis";
+"preset.paper" = "Single Corner";
+"preset.book" = "Double Corner";
+"preset.work" = "Single Angle";
+"preset.film" = "Double Angle";
+"preset.quote" = "Double Quotes";
+"preset.emphasis" = "Single Quotes";
 "preset.emdash" = "Em Dash";
 "preset.middledot" = "Middle Dot";
 "preset.ellipsis" = "Ellipsis";
@@ -73,6 +76,24 @@
 "preset.bracket" = "Brackets";
 "preset.brace" = "Braces";
 "preset.heavy.bracket" = "Heavy Brackets";
-"preset.tortoise" = "Tortoise Brackets";
+"preset.tortoise" = "Tortoise Shell";
 "preset.horizontal.bar" = "Horizontal Bar";
 "preset.tilde" = "Tilde";
+
+/* Preset Usage */
+"preset.paper.usage" = "Film, song, paper, poem titles";
+"preset.work.usage" = "Alternative to 「」";
+"preset.book.usage" = "Books, newspapers, journals, albums";
+"preset.film.usage" = "Alternative to 『』";
+"preset.quote.usage" = "Direct quotation";
+"preset.emphasis.usage" = "Emphasis, indirect quotation";
+"preset.emdash.usage" = "Aside, transition";
+"preset.middledot.usage" = "List separator";
+"preset.ellipsis.usage" = "Omission, trailing off";
+"preset.paren.usage" = "Supplementary info";
+"preset.bracket.usage" = "Editorial addition";
+"preset.brace.usage" = "Grouping";
+"preset.heavy.bracket.usage" = "Emphasis grouping";
+"preset.tortoise.usage" = "Annotation, reference";
+"preset.horizontal.bar.usage" = "Dialogue, range";
+"preset.tilde.usage" = "Range, approximation";

@@ -11,14 +11,15 @@ struct SymbolsSettingsPane: View {
             // Header
             HStack(spacing: 0) {
                 Text("#")
-                    .frame(width: 30, alignment: .center)
+                    .frame(width: 28, alignment: .center)
                 Text(String(localized: "symbols.header.opening"))
-                    .frame(width: 80, alignment: .leading)
+                    .frame(width: 44, alignment: .leading)
                 Text(String(localized: "symbols.header.closing"))
-                    .frame(width: 80, alignment: .leading)
+                    .frame(width: 44, alignment: .leading)
                 Text(String(localized: "symbols.header.label"))
-                    .frame(width: 100, alignment: .leading)
-                Spacer()
+                    .frame(width: 80, alignment: .leading)
+                Text(String(localized: "symbols.header.usage"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .font(.caption)
             .foregroundColor(.secondary)
@@ -101,21 +102,24 @@ struct SymbolRowEditView: View {
     var body: some View {
         HStack(spacing: 0) {
             Text("\(symbol.slotNumber)")
-                .frame(width: 30, alignment: .center)
+                .frame(width: 28, alignment: .center)
                 .foregroundColor(.secondary)
 
             Text(symbol.opening)
-                .frame(width: 80, alignment: .leading)
+                .frame(width: 44, alignment: .leading)
 
             Text(symbol.closing ?? String(localized: "symbols.closing.none"))
-                .frame(width: 80, alignment: .leading)
+                .frame(width: 44, alignment: .leading)
                 .foregroundColor(symbol.closing == nil ? .secondary : .primary)
 
             Text(symbol.label)
-                .frame(width: 100, alignment: .leading)
+                .frame(width: 80, alignment: .leading)
                 .lineLimit(1)
 
-            Spacer()
+            Text(symbol.usage)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .lineLimit(1)
+                .foregroundColor(.secondary)
 
             if isHovered {
                 HStack(spacing: 8) {
@@ -148,24 +152,25 @@ private struct SymbolPreset: Identifiable {
     let opening: String
     let closing: String?
     let label: String
+    let usage: String
 
     static let presets: [SymbolPreset] = [
-        SymbolPreset(opening: "「", closing: "」", label: String(localized: "preset.paper")),
-        SymbolPreset(opening: "『", closing: "』", label: String(localized: "preset.book")),
-        SymbolPreset(opening: "〈", closing: "〉", label: String(localized: "preset.work")),
-        SymbolPreset(opening: "《", closing: "》", label: String(localized: "preset.film")),
-        SymbolPreset(opening: "\u{201C}", closing: "\u{201D}", label: String(localized: "preset.quote")),
-        SymbolPreset(opening: "\u{2018}", closing: "\u{2019}", label: String(localized: "preset.emphasis")),
-        SymbolPreset(opening: "—", closing: nil, label: String(localized: "preset.emdash")),
-        SymbolPreset(opening: "·", closing: nil, label: String(localized: "preset.middledot")),
-        SymbolPreset(opening: "……", closing: nil, label: String(localized: "preset.ellipsis")),
-        SymbolPreset(opening: "(", closing: ")", label: String(localized: "preset.paren")),
-        SymbolPreset(opening: "[", closing: "]", label: String(localized: "preset.bracket")),
-        SymbolPreset(opening: "{", closing: "}", label: String(localized: "preset.brace")),
-        SymbolPreset(opening: "【", closing: "】", label: String(localized: "preset.heavy.bracket")),
-        SymbolPreset(opening: "〔", closing: "〕", label: String(localized: "preset.tortoise")),
-        SymbolPreset(opening: "―", closing: nil, label: String(localized: "preset.horizontal.bar")),
-        SymbolPreset(opening: "~", closing: nil, label: String(localized: "preset.tilde")),
+        SymbolPreset(opening: "「", closing: "」", label: String(localized: "preset.paper"), usage: String(localized: "preset.paper.usage")),
+        SymbolPreset(opening: "〈", closing: "〉", label: String(localized: "preset.work"), usage: String(localized: "preset.work.usage")),
+        SymbolPreset(opening: "『", closing: "』", label: String(localized: "preset.book"), usage: String(localized: "preset.book.usage")),
+        SymbolPreset(opening: "《", closing: "》", label: String(localized: "preset.film"), usage: String(localized: "preset.film.usage")),
+        SymbolPreset(opening: "\u{201C}", closing: "\u{201D}", label: String(localized: "preset.quote"), usage: String(localized: "preset.quote.usage")),
+        SymbolPreset(opening: "\u{2018}", closing: "\u{2019}", label: String(localized: "preset.emphasis"), usage: String(localized: "preset.emphasis.usage")),
+        SymbolPreset(opening: "—", closing: nil, label: String(localized: "preset.emdash"), usage: String(localized: "preset.emdash.usage")),
+        SymbolPreset(opening: "·", closing: nil, label: String(localized: "preset.middledot"), usage: String(localized: "preset.middledot.usage")),
+        SymbolPreset(opening: "……", closing: nil, label: String(localized: "preset.ellipsis"), usage: String(localized: "preset.ellipsis.usage")),
+        SymbolPreset(opening: "(", closing: ")", label: String(localized: "preset.paren"), usage: String(localized: "preset.paren.usage")),
+        SymbolPreset(opening: "[", closing: "]", label: String(localized: "preset.bracket"), usage: String(localized: "preset.bracket.usage")),
+        SymbolPreset(opening: "{", closing: "}", label: String(localized: "preset.brace"), usage: String(localized: "preset.brace.usage")),
+        SymbolPreset(opening: "【", closing: "】", label: String(localized: "preset.heavy.bracket"), usage: String(localized: "preset.heavy.bracket.usage")),
+        SymbolPreset(opening: "〔", closing: "〕", label: String(localized: "preset.tortoise"), usage: String(localized: "preset.tortoise.usage")),
+        SymbolPreset(opening: "―", closing: nil, label: String(localized: "preset.horizontal.bar"), usage: String(localized: "preset.horizontal.bar.usage")),
+        SymbolPreset(opening: "~", closing: nil, label: String(localized: "preset.tilde"), usage: String(localized: "preset.tilde.usage")),
     ]
 }
 
@@ -212,6 +217,7 @@ struct SymbolEditSheet: View {
                                     symbol.opening = preset.opening
                                     symbol.closing = preset.closing
                                     symbol.label = preset.label
+                                    symbol.usage = preset.usage
                                     showPresets = false
                                 }) {
                                     HStack(spacing: 6) {
@@ -267,6 +273,14 @@ struct SymbolEditSheet: View {
             }
 
             HStack {
+                Text(String(localized: "edit.usage"))
+                    .frame(width: 80, alignment: .trailing)
+                TextField(String(localized: "edit.usage.placeholder"), text: $symbol.usage)
+                    .textFieldStyle(.roundedBorder)
+                    .frame(width: 150)
+            }
+
+            HStack {
                 Spacer()
                 Button(String(localized: "edit.cancel")) {
                     dismiss()
@@ -288,6 +302,6 @@ struct SymbolEditSheet: View {
 
 #Preview {
     SymbolsSettingsPane()
-        .frame(width: 450)
+        .frame(width: 480)
         .padding()
 }
