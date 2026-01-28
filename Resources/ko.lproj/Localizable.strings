@@ -27,7 +27,8 @@
 "symbols.header.slot" = "#";
 "symbols.header.opening" = "여는 부호";
 "symbols.header.closing" = "닫는 부호";
-"symbols.header.label" = "라벨";
+"symbols.header.label" = "기호명";
+"symbols.header.usage" = "용도";
 "symbols.closing.none" = "(없음)";
 "symbols.add" = "부호 추가";
 "symbols.reset" = "기본값으로 초기화";
@@ -45,8 +46,10 @@
 "edit.opening.placeholder" = "붙여넣기 또는 프리셋 선택";
 "edit.closing" = "닫는 부호:";
 "edit.closing.placeholder" = "선택 (쌍 부호용)";
-"edit.label" = "라벨:";
-"edit.label.placeholder" = "라벨 이름";
+"edit.label" = "기호명:";
+"edit.label.placeholder" = "기호명";
+"edit.usage" = "용도:";
+"edit.usage.placeholder" = "사용 용도";
 "edit.cancel" = "취소";
 "edit.save" = "저장";
 
@@ -60,19 +63,37 @@
 "about.description" = "한국어 학술 글쓰기를 위한\n타이포그래픽 부호 입력 도구";
 
 /* Preset Labels */
-"preset.paper" = "논문";
-"preset.book" = "단행본";
-"preset.work" = "작품/시";
-"preset.film" = "영화/앨범";
-"preset.quote" = "인용";
-"preset.emphasis" = "강조";
-"preset.emdash" = "Em Dash";
+"preset.paper" = "홑낫표";
+"preset.book" = "겹낫표";
+"preset.work" = "홑화살괄호";
+"preset.film" = "겹화살괄호";
+"preset.quote" = "큰따옴표";
+"preset.emphasis" = "작은따옴표";
+"preset.emdash" = "줄표";
 "preset.middledot" = "가운뎃점";
-"preset.ellipsis" = "말줄임";
+"preset.ellipsis" = "말줄임표";
 "preset.paren" = "소괄호";
 "preset.bracket" = "대괄호";
 "preset.brace" = "중괄호";
 "preset.heavy.bracket" = "굵은 대괄호";
-"preset.tortoise" = "겹낫표";
-"preset.horizontal.bar" = "Horizontal Bar";
+"preset.tortoise" = "거북이괄호";
+"preset.horizontal.bar" = "가로줄표";
 "preset.tilde" = "물결표";
+
+/* Preset Usage */
+"preset.paper.usage" = "영화, 곡, 논문, 시 제목";
+"preset.work.usage" = "「」의 대체 기호";
+"preset.book.usage" = "책, 신문, 학술지, 앨범";
+"preset.film.usage" = "『』의 대체 기호";
+"preset.quote.usage" = "직접 인용";
+"preset.emphasis.usage" = "강조, 간접 인용";
+"preset.emdash.usage" = "부연, 전환";
+"preset.middledot.usage" = "열거 구분";
+"preset.ellipsis.usage" = "생략, 여운";
+"preset.paren.usage" = "보충 설명";
+"preset.bracket.usage" = "원문 보충";
+"preset.brace.usage" = "묶음 표시";
+"preset.heavy.bracket.usage" = "강조 묶음";
+"preset.tortoise.usage" = "주석, 참고";
+"preset.horizontal.bar.usage" = "대화, 구간";
+"preset.tilde.usage" = "범위, 약(約)";
