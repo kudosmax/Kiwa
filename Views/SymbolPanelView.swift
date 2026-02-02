@@ -47,7 +47,7 @@ struct SymbolRowView: View {
                 .frame(width: 44, alignment: .center)
                 .foregroundStyle(isSelected ? .white : .primary)
 
-            Text(symbol.label)
+            Text(symbol.usage)
                 .font(.system(size: 13))
                 .foregroundStyle(isSelected ? .white.opacity(0.9) : .secondary)
                 .lineLimit(1)
