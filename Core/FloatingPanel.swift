@@ -28,7 +28,7 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
 
         super.init(
             contentRect: contentRect,
-            styleMask: [.titled, .fullSizeContentView, .nonactivatingPanel],
+            styleMask: [.borderless, .fullSizeContentView, .nonactivatingPanel],
             backing: .buffered,
             defer: false
         )
@@ -48,19 +48,11 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
         level = .floating
         collectionBehavior = [.auxiliary, .stationary, .moveToActiveSpace, .fullScreenAuxiliary]
 
-        titleVisibility = .hidden
-        titlebarAppearsTransparent = true
         isMovableByWindowBackground = true
 
         hidesOnDeactivate = false
         backgroundColor = .clear
-        titlebarSeparatorStyle = .none
         hasShadow = true
-
-        // Hide traffic light buttons
-        standardWindowButton(.closeButton)?.isHidden = true
-        standardWindowButton(.miniaturizeButton)?.isHidden = true
-        standardWindowButton(.zoomButton)?.isHidden = true
     }
 
     // MARK: - Show/Hide
