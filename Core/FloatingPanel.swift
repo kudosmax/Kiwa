@@ -8,6 +8,7 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
 
     private var localEventMonitor: Any?
     private var globalEventMonitor: Any?
+    private var globalMouseMonitor: Any?
     private let onClose: () -> Void
 
     override var canBecomeKey: Bool { true }
@@ -69,7 +70,13 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
         // Store currently active app
         AppState.shared.previousApp = NSWorkspace.shared.frontmostApplication
 
-        positionNearMouse()
+        if let buttonFrame = statusBarButton?.window?.frame,
+           NSEvent.mouseLocation.y >= buttonFrame.minY {
+            positionBelowStatusItem(buttonFrame)
+        } else {
+            positionNearMouse()
+        }
+
         NSApp.activate(ignoringOtherApps: true)
         makeKeyAndOrderFront(nil)
         isPresented = true
@@ -104,6 +111,22 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
 
     // MARK: - Positioning
 
+    private func positionBelowStatusItem(_ statusItemFrame: NSRect) {
+        guard let screen = NSScreen.main else { return }
+
+        let panelSize = frame.size
+        let screenFrame = screen.visibleFrame
+
+        var x = statusItemFrame.midX - panelSize.width / 2
+        var y = statusItemFrame.minY - panelSize.height - 4
+
+        // Keep within screen bounds
+        x = max(screenFrame.minX, min(x, screenFrame.maxX - panelSize.width))
+        y = max(screenFrame.minY, y)
+
+        setFrameOrigin(NSPoint(x: x, y: y))
+    }
+
     private func positionNearMouse() {
         guard let screen = NSScreen.main else { return }
 
@@ -111,8 +134,8 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
         let panelSize = frame.size
         let screenFrame = screen.visibleFrame
 
-        var x = mouseLocation.x - panelSize.width / 2
-        var y = mouseLocation.y - panelSize.height / 2
+        var x = mouseLocation.x
+        var y = mouseLocation.y - panelSize.height
 
         // Keep within screen bounds
         x = max(screenFrame.minX, min(x, screenFrame.maxX - panelSize.width))
@@ -127,6 +150,12 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
         // Global keyboard events (for ESC when panel has focus)
         globalEventMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { [weak self] event in
             self?.handleKeyDown(event)
+        }
+
+        // Global mouse events (close when clicking outside)
+        globalMouseMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] _ in
+            guard let self, self.isPresented else { return }
+            self.close()
         }
 
         // Local events
@@ -154,6 +183,10 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
         if let monitor = globalEventMonitor {
             NSEvent.removeMonitor(monitor)
             globalEventMonitor = nil
+        }
+        if let monitor = globalMouseMonitor {
+            NSEvent.removeMonitor(monitor)
+            globalMouseMonitor = nil
         }
     }
 
@@ -223,7 +256,5 @@ final class FloatingPanel: NSPanel, NSWindowDelegate {
     // MARK: - NSWindowDelegate
 
     func windowDidResignKey(_ notification: Notification) {
-        // Don't auto-close when opening settings
-        // close()
     }
 }

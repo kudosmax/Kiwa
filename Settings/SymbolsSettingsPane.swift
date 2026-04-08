@@ -22,7 +22,7 @@ struct SymbolsSettingsPane: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
             .padding(.horizontal, 8)
             .padding(.vertical, 6)
 
@@ -46,7 +46,7 @@ struct SymbolsSettingsPane: View {
                             Image(systemName: "plus.circle.fill")
                             Text(String(localized: "symbols.add"))
                         }
-                        .foregroundColor(.accentColor)
+                        .foregroundStyle(Color.accentColor)
                     }
                     .buttonStyle(.plain)
                 }
@@ -58,7 +58,7 @@ struct SymbolsSettingsPane: View {
                         Image(systemName: "arrow.counterclockwise")
                         Text(String(localized: "symbols.reset"))
                     }
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
                 }
                 .buttonStyle(.plain)
             }
@@ -103,14 +103,14 @@ struct SymbolRowEditView: View {
         HStack(spacing: 0) {
             Text("\(symbol.slotNumber)")
                 .frame(width: 28, alignment: .center)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
 
             Text(symbol.opening)
                 .frame(width: 44, alignment: .leading)
 
             Text(symbol.closing ?? String(localized: "symbols.closing.none"))
                 .frame(width: 44, alignment: .leading)
-                .foregroundColor(symbol.closing == nil ? .secondary : .primary)
+                .foregroundStyle(symbol.closing == nil ? .secondary : .primary)
 
             Text(symbol.label)
                 .frame(width: 80, alignment: .leading)
@@ -119,7 +119,7 @@ struct SymbolRowEditView: View {
             Text(symbol.usage)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .lineLimit(1)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
 
             if isHovered {
                 HStack(spacing: 8) {
@@ -130,7 +130,7 @@ struct SymbolRowEditView: View {
 
                     Button(action: onDelete) {
                         Image(systemName: "trash")
-                            .foregroundColor(.red)
+                            .foregroundStyle(.red)
                     }
                     .buttonStyle(.plain)
                 }
@@ -190,7 +190,7 @@ struct SymbolEditSheet: View {
             HStack {
                 Text(String(localized: "edit.slot"))
                 Text("\(symbol.slotNumber)")
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
             }
 
             // Preset picker
@@ -202,7 +202,7 @@ struct SymbolEditSheet: View {
                         Image(systemName: showPresets ? "chevron.up" : "chevron.down")
                             .font(.caption)
                     }
-                    .foregroundColor(.accentColor)
+                    .foregroundStyle(Color.accentColor)
                 }
                 .buttonStyle(.plain)
 

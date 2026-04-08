@@ -26,6 +26,7 @@ final class AppState {
     // Previously active app (to restore after panel closes)
     var previousApp: NSRunningApplication?
 
+
     private init() {
         popup = Popup()
         symbolStore = SymbolStore.shared
@@ -63,16 +64,21 @@ final class AppState {
     @MainActor
     func selectCurrentSymbol() {
         guard let symbol = symbolStore.selectedSymbol else { return }
-        popup.close()
-        SymbolInserter.shared.insert(symbol)
-        previousApp?.activate(options: [])
+        confirmAndClose(symbol)
     }
 
     @MainActor
     func selectSymbol(at slotNumber: Int) {
         guard let symbol = symbolStore.symbol(for: slotNumber) else { return }
-        popup.close()
+        selection = symbol.id
+        confirmAndClose(symbol)
+    }
+
+    @MainActor
+    private func confirmAndClose(_ symbol: Symbol) {
         SymbolInserter.shared.insert(symbol)
+        NSSound(named: .init("Frog"))?.play()
+        popup.close()
         previousApp?.activate(options: [])
     }
 

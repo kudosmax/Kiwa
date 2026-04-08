@@ -75,7 +75,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
         if let button = statusItem?.button {
-            button.image = NSImage(systemSymbolName: "curlybraces", accessibilityDescription: "Kiwa")
+            button.image = NSImage(systemSymbolName: "quote.opening", accessibilityDescription: "Kiwa")
             button.action = #selector(statusItemClicked)
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
             button.target = self

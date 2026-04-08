@@ -60,8 +60,10 @@ struct SymbolRowView: View {
         .padding(.horizontal, 8)
         .frame(height: Popup.itemHeight)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(isSelected ? Color.accentColor.opacity(0.85) : Color.white.opacity(0.001))
+        .background(isSelected ? Color.accentColor.opacity(0.85) : Color.clear)
+        .contentShape(Rectangle())
         .clipShape(RoundedRectangle(cornerRadius: Popup.cornerRadius))
+        .animation(.easeInOut(duration: 0.1), value: isSelected)
     }
 }
 
@@ -79,20 +81,6 @@ struct FooterView: View {
                 title: String(localized: "footer.settings"),
                 shortcut: ",",
                 action: { AppState.shared.openSettings() }
-            )
-
-            FooterItemView(
-                icon: "info.circle",
-                title: String(localized: "footer.about"),
-                shortcut: nil,
-                action: { AppState.shared.openAbout() }
-            )
-
-            FooterItemView(
-                icon: "power",
-                title: String(localized: "footer.quit"),
-                shortcut: "Q",
-                action: { AppState.shared.quit() }
             )
         }
     }

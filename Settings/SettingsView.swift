@@ -32,8 +32,6 @@ struct SettingsView: View {
                                     try SMAppService.mainApp.unregister()
                                 }
                             } catch {
-                                print("Failed to \(newValue ? "register" : "unregister") login item: \(error)")
-                                // Revert toggle on failure
                                 launchAtLogin = !newValue
                             }
                         }
