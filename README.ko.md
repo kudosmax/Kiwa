@@ -50,14 +50,6 @@ brew tap kudosmax/tap
 brew install --cask kiwa
 ```
 
-> [!WARNING]
-> Kiwa는 Apple 공증을 받지 않았기 때문에 처음 실행 시 macOS가 차단할 수 있습니다. 허용하려면:
->
-> 1. **시스템 설정 > 개인정보 보호 및 보안**으로 이동합니다.
-> 2. 아래로 스크롤하여 *"Mac을 보호하기 위해 'Kiwa'을(를) 차단했습니다."* 메시지를 찾습니다.
-> 3. **"그래도 열기"**를 클릭합니다.
->
-> <img width="600px" src="Resources/Screenshots/gatekeeper.png" alt="Gatekeeper 경고" />
 
 ## 사용법
 
