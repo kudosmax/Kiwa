@@ -36,7 +36,7 @@ Kiwa works on macOS Sonoma 14 or later.
 
 * Lightweight and fast
 * Keyboard-first
-* Copies selected symbol to clipboard instantly
+* Copies selected symbol to clipboard with sound confirmation
 * Fully customizable (up to 9 symbol slots)
 * Native macOS UI
 * Supports Korean and English
@@ -46,7 +46,8 @@ Kiwa works on macOS Sonoma 14 or later.
 Download the latest version from the [releases](https://github.com/kudosmax/Kiwa/releases/latest) page, or use Homebrew:
 
 ```sh
-brew install --cask kiwa # coming soon
+brew tap kudosmax/tap
+brew install --cask kiwa
 ```
 
 > [!WARNING]
@@ -60,26 +61,27 @@ brew install --cask kiwa # coming soon
 
 ## Usage
 
-1. <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd> to open the Kiwa panel, or click on its icon in the menu bar.
-2. Press <kbd>⌘1</kbd>–<kbd>⌘9</kbd> to select a symbol.
-3. The symbol is copied to your clipboard and the panel closes automatically.
+1. <kbd>SHIFT (⇧)</kbd> + <kbd>OPTION (⌥)</kbd> + <kbd>D</kbd> to open the Kiwa panel, or click the `"` icon in the menu bar.
+2. Press <kbd>⌘1</kbd>–<kbd>⌘9</kbd> to select a symbol, or use arrow keys and <kbd>Return</kbd>.
+3. The symbol is copied to your clipboard with a sound confirmation and the panel closes automatically.
 4. Paste with <kbd>⌘V</kbd> wherever you need it.
-5. To dismiss the panel, press <kbd>ESC</kbd> or click outside of it.
-6. To customize the behavior, open "Settings" with <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd>.
+5. To dismiss the panel, press <kbd>ESC</kbd> or click anywhere outside of it.
+6. Right-click the menu bar icon for quick access to About and Quit.
+7. To customize the behavior, open "Settings" with <kbd>COMMAND (⌘)</kbd> + <kbd>,</kbd>.
 
 ## Default Symbols
 
 | Key | Symbol | Usage |
 |-----|--------|-------|
-| 1 | 「」 | Paper title |
-| 2 | 『』 | Book title |
-| 3 | 〈〉 | Work / Poem title |
-| 4 | 《》 | Film / Album title |
-| 5 | “” | Quotation |
-| 6 | ‘’ | Emphasis |
-| 7 | — | Em Dash |
-| 8 | · | Middle Dot |
-| 9 | …… | Ellipsis |
+| 1 | 「」 | Film, song, paper, poem titles |
+| 2 | 〈〉 | Alternative to 「」 |
+| 3 | 『』 | Books, newspapers, journals, albums |
+| 4 | 《》 | Alternative to 『』 |
+| 5 | — | Aside, transition |
+| 6 | · | List separator |
+| 7 | …… | Omission, trailing off |
+| 8 | “\u{200B}” | Direct quotation |
+| 9 | ‘\u{200B}’ | Emphasis, indirect quotation |
 
 ## Advanced
 
